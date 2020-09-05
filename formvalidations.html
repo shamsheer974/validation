@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>form validations</title>
+
+<script>
+function validate()
+{
+    var username=document.myform.uname.value;
+    var phone number=document.myform.pass.value;
+    var choice of choices=document.choice.value;
+    var subject interest=document.myform.interest.value;
+
+   if(username.length<6)
+    {
+         alert("no blank values values are allowed")
+         return false;
+    }
+      else if(phone number.value.trim()==""|| phone number.value <1 || phone number.value>10)
+     { 
+       alert("blank phone number") 
+       return false
+     }
+    else if(choice of choices.value.trim()="")
+     {
+    alert("blank the choice")
+     return false
+     }
+    else{
+      return true;
+        }
+}      
+</script>
+</head>
+<body>
+<form name="myform" onsubmit=" return validate()" action="message.html">
+ First name: <input name="uname" placeholder="username" type="text"/><br><br>
+  phone number: <input name="pass" placeholder="phone number" type="tel"/><br><br>
+choice of choices:<input type="radio" name="choice">Masters<br><br>
+                  <input type="radio" name="choice">bachelors<br><br>
+subject interests:<input type="checkbox" name="interest">MECH
+                  <input type="checkbox" name="interest">CSE
+                  <input type="checkbox" name="interest">EEE
+                  <input type="checkbox" name="interest">ECE<br><br>
+<button  type="submit">submit</button>
+</form>
+</body>
+</html>
